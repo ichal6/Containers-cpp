@@ -3,4 +3,4 @@ project(ex2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(ex2 main.cpp Employee.cpp Employee.h HRMS.cpp HRMS.h)
+add_executable(ex2 src/main.cpp src/Employee.cpp src/Employee.h src/HRMS.cpp src/HRMS.h)
