@@ -25,6 +25,8 @@ public:
              const string &departmentId,
              const string &position);
 
+    Employee();
+
 public:
     const string &getId() const;
 

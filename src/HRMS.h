@@ -14,7 +14,7 @@
 
 class HRMS {
 private:
-    std::vector<Employee> allEmployees;
+    std::map<std::string, Employee> allEmployees;
     std::map<std::string, std::list<std::string> > departmentToEmployees;
     std::map<std::string, double> mapOfSalary;
 public:
