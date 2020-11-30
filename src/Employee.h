@@ -6,6 +6,7 @@
 #define EX2_EMPLOYEE_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -44,6 +45,8 @@ public:
     const string &getPosition() const;
 
     void setPosition(const string &position);
+
+    friend std::ostream& operator<<(std::ostream &strm, Employee employee);
 };
 
 

@@ -55,3 +55,10 @@ Employee::Employee(const string &id,
                    departmentId(departmentId),
                    position(position)
                    { }
+
+std::ostream &operator<<(ostream &strm, Employee employee) {
+    return strm << "id: " << employee.id << "\nname: " << employee.name
+    << "\nsurname: " << employee.surname << "\ndepartmentId: " << employee.departmentId
+    << "\nposition: " << employee.position;
+}
+
