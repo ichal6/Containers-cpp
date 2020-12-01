@@ -23,6 +23,11 @@ public:
     void changeSalary(std::string employeeId, double salary);
     void printSalaries();
     void printSalariesSorted();
+private:
+    struct Comparator {
+        template <typename T>
+        bool operator()(const T& l, const T& r) const;
+    };
 };
 
 
