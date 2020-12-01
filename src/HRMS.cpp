@@ -4,10 +4,6 @@
 
 #include "HRMS.h"
 
-void HRMS::printSalaries() {
-
-}
-
 void HRMS::add(Employee employee, std::string departmentId, double salary) {
     allEmployees.insert({employee.getId(), employee});
     if(departmentToEmployees.count(departmentId)){
@@ -26,7 +22,7 @@ void HRMS::printDepartment(std::string departmentId) {
         if(listOfEmployeesId.empty()){
             std::cout << "The list is empty" << std::endl;
         }
-        std::cout << "List of employee for department " << departmentId;
+        std::cout << "List of employees for department " << departmentId;
         std::cout << "\nid\tname\tsurname\tposition" << std::endl;
         for(std::string employeeId: listOfEmployeesId){
             if(allEmployees.count(employeeId)){
@@ -42,6 +38,17 @@ void HRMS::printDepartment(std::string departmentId) {
 void HRMS::changeSalary(std::string employeeId, double salary) {
     if(mapOfSalary.count(employeeId)){
         mapOfSalary[employeeId] = salary;
+    }
+}
+
+void HRMS::printSalaries() {
+    if(allEmployees.empty()){
+        std::cout << "The list is empty" << std::endl;
+    }
+    std::cout << "List of all employees" << std::endl;
+    std::cout << "\nid\tname\tsurname\tposition\tsalary" << std::endl;
+    for(auto & singleEntry : allEmployees){
+        std::cout << singleEntry.second << " " << mapOfSalary[singleEntry.first] << std::endl;
     }
 }
 

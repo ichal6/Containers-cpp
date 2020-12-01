@@ -13,6 +13,8 @@ int main() {
     hrms.add(employee1, employee1.getDepartmentId(), 2400.67);
     hrms.printDepartment("dId1");
     hrms.changeSalary(employee1.getId() ,100);
+    hrms.printSalaries();
+
 
     return 0;
 }
