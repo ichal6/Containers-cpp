@@ -40,7 +40,9 @@ void HRMS::printDepartment(std::string departmentId) {
 }
 
 void HRMS::changeSalary(std::string employeeId, double salary) {
-
+    if(mapOfSalary.count(employeeId)){
+        mapOfSalary[employeeId] = salary;
+    }
 }
 
 void HRMS::printSalariesSorted() {
